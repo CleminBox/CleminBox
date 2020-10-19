@@ -23,17 +23,26 @@ def RunCode(codebytes):
 			code_line[0] = reverse_mapping[code_line[0]]
 			#print(code_line)
 			if code_line[0] == "setv":
-				variable_memory[int(code_line[1])] = code_line[2]
+				try:
+					variable_memory[int(code_line[1])] = code_line[2]
+				except:
+					pass
 			if code_line[0] == "addv":
-				isnums = True
-				if IsNumInCode(variable_memory[int(code_line[1])]) == False or IsNumInCode(variable_memory[int(code_line[2])]) == False:
-					isnums = False
-				if isnums:
-					variable_memory[int(code_line[3])] = int(variable_memory[int(code_line[1])]) + int(variable_memory[int(code_line[2])])
-				else:
-					variable_memory[int(code_line[3])] = str(variable_memory[int(code_line[1])]) + str(variable_memory[int(code_line[2])])
+				try:
+					isnums = True
+					if IsNumInCode(variable_memory[int(code_line[1])]) == False or IsNumInCode(variable_memory[int(code_line[2])]) == False:
+						isnums = False
+					if isnums:
+						variable_memory[int(code_line[3])] = int(variable_memory[int(code_line[1])]) + int(variable_memory[int(code_line[2])])
+					else:
+						variable_memory[int(code_line[3])] = str(variable_memory[int(code_line[1])]) + str(variable_memory[int(code_line[2])])
+				except:
+					pass
 			if code_line[0] == "prnt":
-				print(variable_memory[int(code_line[1])])
+				try:
+					print(variable_memory[int(code_line[1])])
+				except:
+					pass
 			#print(code_line)
 if __name__ == "__main__":
 	codefile = None
