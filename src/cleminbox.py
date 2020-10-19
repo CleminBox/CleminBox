@@ -39,8 +39,8 @@ if __name__ == "__main__":
 	codefile = None
 	try:
 		codefile = open(sys.argv[1], "rb")
-		codefile.close()
 	except:
 		print("CleminBox - Making programming fun")
 		print("Usage: cleminbox [filename]")
 	RunCode(codefile.read())
+	codefile.close()
