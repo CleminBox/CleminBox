@@ -36,10 +36,11 @@ def RunCode(codebytes):
 				print(variable_memory[int(code_line[1])])
 			#print(code_line)
 if __name__ == "__main__":
+	codefile = None
 	try:
 		codefile = open(sys.argv[1], "rb")
-		RunCode(codefile.read())
 		codefile.close()
 	except:
 		print("CleminBox - Making programming fun")
 		print("Usage: cleminbox [filename]")
+	RunCode(codefile.read())
