@@ -27,7 +27,7 @@ generate_runtime_packages: build prepare_packages
 	tar -C rfs -c "." | gzip -f > dist/cleminbox-runtime-install.tar.gz
 
 generate_sdk_packages: generate_runtime_packages
-	cp bin/cleminbox.py rfs/usr/share/cleminbox
+	cp bin/clemincomp.py rfs/usr/share/cleminbox
 	python3 tools/generate_sdk_wrappers.py rfs/usr/bin /usr/share/cleminbox
 	tar -C rfs -c "." | gzip -f > dist/cleminbox-sdk-install.tar.gz
 
