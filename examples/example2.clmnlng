@@ -2,7 +2,7 @@ setv	1-15
 setv	2-23
 setv	3-0
 addv	1-2-3
-setv	4-The cool number is 
+setv	4-Here's a number: 
 setv	5-!
 setv	6-0
 addv	4-3-6
