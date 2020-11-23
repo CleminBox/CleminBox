@@ -1,4 +1,3 @@
-# generate_wrappers.py - A tool to generate Shell Script based wrappers for CleminBox.
 import sys
 import os
 template_clemincomp = """#!/bin/bash
