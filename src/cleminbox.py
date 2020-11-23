@@ -51,5 +51,6 @@ if __name__ == "__main__":
 	except:
 		print("CleminBox - Making programming fun")
 		print("Usage: cleminbox [filename]")
+		exit(-1)
 	RunCode(codefile.read())
 	codefile.close()

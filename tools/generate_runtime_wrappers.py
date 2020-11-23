@@ -2,7 +2,7 @@ import sys
 import os
 template_cleminbox = """#!/bin/bash
 cd CLEMINDIR
-python3 cleminbox.py $@"""
+python3 cleminbox.py $1"""
 cleminbox_bin_dir = sys.argv[1]
 cleminbox_code_dir = sys.argv[2]
 tmp_file = open(cleminbox_bin_dir + "/cleminbox", "w")
