@@ -8,12 +8,10 @@ variable_memory = []
 for i in range(variable_memory_size):
 	variable_memory.append("")
 def IsNumInCode(couldbenum):
-	num_chars = list("1234567890")
-	for i in list(couldbenum):
-		if i in num_chars:
-			pass
-		else:
-			return False
+	try:
+		tmpvar = int(couldbenum)
+	except:
+		return False
 	return True
 def RunCode(codebytes):
 	code = codebytes.decode()
